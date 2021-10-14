@@ -36,10 +36,10 @@ const PostSchema = new mongoose.Schema({
   text: { type: String, required: true },
   userName: { type: String, required: true },
 
-  user: { 
-        //type : [profilesSchema], required: true
-        type: mongoose.Schema.Types.ObjectId, required: true, ref: "profile"
-    },
+  // user: { 
+  //       //type : [profilesSchema], required: true
+  //       type: mongoose.Schema.Types.ObjectId, required: true, ref: "profile"
+  //   },
 
  comments: { default: [], type: [commentSchema] },
   image :{ type: String},
@@ -58,7 +58,7 @@ PostSchema.static("findPostWithComments", async function (mongoQuery) {
     .skip(mongoQuery.options.skip)
     .sort(mongoQuery.options.sort) // no matter how I write them but Mongo will always apply SORT then SKIP then LIMIT in this order
     .populate({ path: "comments", select: "comment" })
-    .populate({ path: "user"  })
+   // .populate({ path: "user"  })
     
     
   return { total, posts };
