@@ -30,9 +30,8 @@ const __dirname = dirname(__filename);
 const publicDirectory = path.join(__dirname, "../public");
 
 const server = express();
-
-// const { PORT } = process.env || 3002;
-const PORT = 3002;
+ const { PORT } = process.env ;
+//const PORT = 3002;
 
 const whiteList = ["http://localhost:3002"];
 const corsOptions = {
