@@ -9,8 +9,8 @@ import listEndpoints from "express-list-endpoints";
 // import blogsRouter from "./blogs/index.js";
 
 // import { errorHandler } from "./errorHandlers.js";
-import dotenv from "dotenv";
-dotenv.config();
+// import dotenv from "dotenv";
+// dotenv.config();
 import path, { dirname } from "path";
 import mongoose from "mongoose";
 import { fileURLToPath } from "url";
